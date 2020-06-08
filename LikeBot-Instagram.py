@@ -11,7 +11,10 @@ class InstagramBot:
 
     def Login(self):
         driver = self.driver
-        driver.get("https://www.instagram.com/")
+        #Perfil
+        driver.get("https://www.instagram.com/") #Este para perfis
+        #Tag
+        #driver.get("https://www.instagram.com/explore/tags/") #Este para tags
         time.sleep(3)
 
         username_Element = driver.find_element_by_xpath("//input[@name='username']")
@@ -23,7 +26,7 @@ class InstagramBot:
         password_Element.send_keys(self.password)
         password_Element.send_keys(Keys.RETURN)
         time.sleep(5)
-        self.curtir_fotos('thamara.lyandra')
+        self.curtir_fotos('PERFIL OU TAG ALVO PARA O BOT CURTIR AS FOTOS')
 
     def curtir_fotos(self, hashtag):
         driver = self.driver
@@ -54,5 +57,5 @@ class InstagramBot:
                 time.sleep(5)
 
 
-login = InstagramBot('contos.aelina', '96825524')
+login = InstagramBot('YOUR ACCOUNT', 'YOUR PASSWORD')
 login.Login()
