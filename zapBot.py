@@ -3,8 +3,8 @@ import time
 
 class WhatsappBot:
     def __init__(self):
-        self.mensagem = "Olá, você está falando com um robô!!"
-        self.grupos = ["Thamara"]
+        self.mensagem = "Coloque Aqui A Sua Mensagem"
+        self.grupos = ["Coloque Aqui Para Quem Você Quer Enviar A Mensagem"]
         options = webdriver.ChromeOptions()
         options.add_argument("lang=pt-br")
         self.driver = webdriver.Chrome(executable_path=r'./chromedriver.exe')
